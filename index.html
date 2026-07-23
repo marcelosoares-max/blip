@@ -606,6 +606,21 @@ footer .footer-logos img{height:28px;border-radius:6px}
 .chapter-desc{color:var(--text-muted);font-size:.98rem;line-height:1.75;max-width:680px;margin:0 auto}
 .chapter-sub{margin-top:1.6rem;display:inline-flex;flex-wrap:wrap;justify-content:center;gap:8px}
 .chapter-sub span{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:100px;padding:5px 14px;font-size:.72rem;color:var(--text-light);font-weight:600}
+/* ===== Comparativo de fluxo — menu determinístico vs. IA (estilo celular) ===== */
+.flowcmp-wrap{max-width:1100px;margin:3.5rem auto 0}
+.flowcmp-intro{text-align:center;margin-bottom:2.4rem}
+.flowcmp-intro .flow-eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blip-primary);margin-bottom:.6rem}
+.flowcmp-intro h3{font-size:clamp(1.25rem,2.3vw,1.7rem);font-weight:800;margin-bottom:.6rem}
+.flowcmp-intro p{color:var(--text-muted);font-size:.92rem;max-width:640px;margin:0 auto;line-height:1.7}
+.flowcmp-phones{display:flex;justify-content:center;align-items:flex-start;gap:3rem;flex-wrap:wrap}
+.flowcmp-phone-block{display:flex;flex-direction:column;align-items:center;width:320px}
+.flowcmp-label{display:inline-flex;align-items:center;gap:7px;font-size:.78rem;font-weight:700;padding:7px 16px;border-radius:100px;margin-bottom:1.1rem}
+.flowcmp-phone-block.old .flowcmp-label{background:rgba(255,255,255,.06);color:var(--text-muted);border:1px solid rgba(255,255,255,.14)}
+.flowcmp-phone-block.new .flowcmp-label{background:rgba(28,200,238,.12);color:var(--blip-primary);border:1px solid rgba(28,200,238,.35)}
+.flowcmp-stat{margin-top:1.1rem;font-size:.76rem;color:var(--text-muted);text-align:center;max-width:280px;line-height:1.5}
+.flowcmp-phone-block.old .flowcmp-stat strong{color:var(--renner-red)}
+.flowcmp-phone-block.new .flowcmp-stat strong{color:var(--blip-primary)}
+@media(max-width:760px){.flowcmp-phones{gap:2rem}}
 </style>
 </head>
 <body>
@@ -720,6 +735,78 @@ footer .footer-logos img{height:28px;border-radius:6px}
           <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;margin-top:1px;width:18px;height:18px;border-radius:4px;background:rgba(28,200,238,.15);display:inline-flex;align-items:center;justify-content:center;font-size:10px;color:var(--blip-primary);font-weight:800;">✓</span><span style="font-size:.82rem;color:var(--text-light);line-height:1.6;"><strong style="color:var(--blip-primary);">Carrossel + busca guiada por IA</strong> fecha a venda dentro da própria conversa</span></div>
           <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;margin-top:1px;width:18px;height:18px;border-radius:4px;background:rgba(37,211,102,.15);display:inline-flex;align-items:center;justify-content:center;font-size:10px;color:var(--wa-green);font-weight:800;">✓</span><span style="font-size:.82rem;color:var(--text-light);line-height:1.6;"><strong style="color:var(--wa-green);">Checkout nativo</strong> com Pix copia-e-cola e links de pagamento, sem sair do WhatsApp</span></div>
           <div style="display:flex;gap:12px;align-items:flex-start;"><span style="flex-shrink:0;margin-top:1px;width:18px;height:18px;border-radius:4px;background:rgba(238,28,37,.12);display:inline-flex;align-items:center;justify-content:center;font-size:10px;color:var(--renner-red);font-weight:800;">✓</span><span style="font-size:.82rem;color:var(--text-light);line-height:1.6;"><strong style="color:var(--renner-red);">Multiagentes + Copilot</strong> dão contexto completo ao humano só quando o transbordo é necessário</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Comparativo de fluxo: menu determinístico vs. IA -->
+    <div class="flowcmp-wrap">
+      <div class="flowcmp-intro">
+        <div class="flow-eyebrow">Mesmo caso, dois jeitos de resolver</div>
+        <h3>Troca de produto: "digite 1 para isso" <span style="color:var(--text-muted);font-weight:400;">vs.</span> conversar do seu jeito</h3>
+        <p>O mesmo pedido de troca, lado a lado: de um lado o menu fixo que a cliente enfrenta hoje; do outro, o mesmo caso resolvido em linguagem natural pelo Contato Inteligente.</p>
+      </div>
+      <div class="flowcmp-phones">
+        <!-- FLUXO DETERMINÍSTICO -->
+        <div class="flowcmp-phone-block old">
+          <div class="flowcmp-label">🤖 Hoje — Menu Determinístico</div>
+          <div class="phone-wrap">
+            <div class="phone-frame">
+              <div class="phone-notch"><div class="notch-cam"></div><div class="notch-speaker"></div></div>
+              <div class="wa-screen">
+                <div class="wa-header">
+                  <div class="wa-back">←</div>
+                  <div class="wa-avatar" style="background:#8a8a8a;display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🤖</div>
+                  <div class="wa-contact-info"><div class="wa-contact-name">Renner</div><div class="wa-contact-status">Atendimento automático</div></div>
+                  <div class="wa-header-actions">⋮</div>
+                </div>
+                <div class="wa-body">
+                  <div class="wa-date-chip">Hoje · 14:02</div>
+                  <div class="msg msg-in">Olá! Escolha uma opção:<br>1️⃣ Trocar produto<br>2️⃣ Rastrear pedido<br>3️⃣ Formas de pagamento<br>4️⃣ Falar com atendente<div class="msg-time">14:02</div></div>
+                  <div class="msg msg-out">1<div class="msg-time">14:02</div></div>
+                  <div class="msg msg-in">Qual o motivo da troca?<br>1️⃣ Tamanho errado<br>2️⃣ Peça com defeito<br>3️⃣ Não gostei do produto<div class="msg-time">14:03</div></div>
+                  <div class="msg msg-out">1<div class="msg-time">14:03</div></div>
+                  <div class="msg msg-in">Informe o CPF usado na compra:<div class="msg-time">14:03</div></div>
+                  <div class="msg msg-out">123.456.789-00<div class="msg-time">14:04</div></div>
+                  <div class="msg msg-in">Encontrei seu pedido. Digite o item que deseja trocar:<br>1️⃣ Calça Skinny — Tam. P<br>2️⃣ Blusa Cropped — Tam. M<div class="msg-time">14:04</div></div>
+                  <div class="msg msg-out">1<div class="msg-time">14:04</div></div>
+                  <div class="msg msg-in">Para qual tamanho deseja trocar?<br>1️⃣ PP&nbsp;&nbsp;2️⃣ M&nbsp;&nbsp;3️⃣ G&nbsp;&nbsp;4️⃣ GG<div class="msg-time">14:05</div></div>
+                  <div class="msg msg-out">2<div class="msg-time">14:05</div></div>
+                  <div class="msg msg-in">Gerando sua etiqueta de troca. Aguarde...<div class="msg-time">14:05</div></div>
+                </div>
+                <div class="wa-input-bar"><input class="wa-input" placeholder="Escreva uma mensagem..." readonly><button type="button" class="wa-send" disabled style="opacity:.5;cursor:default;">➤</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="flowcmp-stat"><strong>6 respostas</strong> da cliente · 3 menus até chegar na solução</div>
+        </div>
+        <!-- FLUXO COM IA -->
+        <div class="flowcmp-phone-block new">
+          <div class="flowcmp-label">🧠 Com IA — Contato Inteligente</div>
+          <div class="phone-wrap">
+            <div class="phone-frame">
+              <div class="phone-notch"><div class="notch-cam"></div><div class="notch-speaker"></div></div>
+              <div class="wa-screen">
+                <div class="wa-header">
+                  <div class="wa-back">←</div>
+                  <div class="wa-avatar" style="background:linear-gradient(135deg,var(--blip-primary),#0a8fb0);display:flex;align-items:center;justify-content:center;font-size:1.1rem;">🧠</div>
+                  <div class="wa-contact-info"><div class="wa-contact-name">Renner</div><div class="wa-contact-status">🟢 Contato Inteligente</div></div>
+                  <div class="wa-header-actions">⋮</div>
+                </div>
+                <div class="wa-body">
+                  <div class="wa-date-chip">Hoje · 14:02</div>
+                  <div class="msg msg-out">Comprei uma calça e veio um tamanho menor que o meu, queria trocar por um M<div class="msg-time">14:02</div></div>
+                  <div class="msg msg-in">Localizei seu pedido #45291 — Calça Skinny, tamanho P. Posso trocar pela mesma calça em M?<div class="msg-time">14:02</div></div>
+                  <div class="msg msg-out">Isso mesmo!<div class="msg-time">14:03</div></div>
+                  <div class="msg msg-in">Show! Já reservei o M pra você. Confirma a coleta na Rua das Flores, 123?<div class="msg-time">14:03</div></div>
+                  <div class="msg msg-out">Sim, pode ser<div class="msg-time">14:03</div></div>
+                  <div class="msg msg-in">Etiqueta de troca gerada ✅ O motoboy passa até amanhã às 18h. Assim que o item chegar no CD, o novo tamanho já sai pra entrega.<div class="msg-time">14:03</div></div>
+                </div>
+                <div class="wa-input-bar"><input class="wa-input" placeholder="Escreva uma mensagem..." readonly><button type="button" class="wa-send" disabled style="opacity:.5;cursor:default;">➤</button></div>
+              </div>
+            </div>
+          </div>
+          <div class="flowcmp-stat"><strong>2 respostas</strong> da cliente · resolvido na primeira mensagem, sem menu</div>
         </div>
       </div>
     </div>
